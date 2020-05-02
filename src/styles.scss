@@ -1,0 +1,102 @@
+$base-color: #171822;
+$grey-color: #7B7F9E;
+$beige-color: #F1F3F6;
+$yellow-color: #FFAC30;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.p10 {
+  padding: 10px;
+}
+
+.p20 {
+  padding: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: none;
+}
+
+li {
+  cursor: default;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $base-color;
+}
+
+li {
+  list-style-type: none;
+}
+
+input:focus, 
+button:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+input {
+  border: 1px solid #bfbfbf;
+}
+
+button {
+  border: 0;
+}
+
+.text-grey {
+  color: $grey-color;
+}
+
+.background-beige {
+  background: $beige-color;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.mt100 {
+  margin-top: 100px;
+}
+
+.container-beige {
+  background: $beige-color;
+  border-radius: 10px;
+}
+
+.input-default {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.button-default {
+  background: $yellow-color;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.b-big {
+  padding: 10px 20px;
+}
