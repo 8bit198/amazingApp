@@ -1,27 +1,26 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-2">
-      <ul>
-        <li>
-          Схема зала
-          <i class="material-icons">room_service</i>
+  <div class="row no-gutters">
+    <div class="col-3">
+      <ul class="dashboard-ul">
+        <li class="d-flex justify-content-between dashboard-li-active m0" (click)="onTabClicked('layout')">
+          <div class="dashboard-li_text-container">Схема зала</div>
+          <div class="dashboard-li_icon-container"><i class="material-icons">room_service</i></div>
         </li> 
-        <li>
-          Персонал
-          <i class="material-icons">assignment_ind</i>
+        <li class="d-flex justify-content-between" (click)="onTabClicked('staff')">
+          <div class="dashboard-li_text-container">Персонал</div>
+          <div class="dashboard-li_icon-container"><i class="material-icons">assignment_ind</i></div>
         </li>
-        <li>
-          Уведомления
-          <i class="material-icons">notifications</i>
+        <li class="d-flex justify-content-between" (click)="onTabClicked('notifications')">
+          <div class="dashboard-li_text-container">Уведомления</div>
+          <div class="dashboard-li_icon-container"><i class="material-icons">notifications</i></div>
         </li>
-        <li>
-          Выход
-          <i class="material-icons">exit_to_app</i>
+        <li class="d-flex justify-content-between">
+          <div class="dashboard-li_text-container">Выход</div>
+          <div class="dashboard-li_icon-container"><i class="material-icons">exit_to_app</i></div>          
         </li>
       </ul>
     </div>
-    <div class="col-10">
-      2222
+    <div class="col-9">
       <router-outlet></router-outlet>
     </div>
   </div>
