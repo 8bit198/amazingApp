@@ -1,26 +1,38 @@
 <div class="container-fluid hall-container" id="hall-container">
   <ul class="row no-gutters">
-    <li class="col-lg-4 col-md-6 table-info-li" *ngFor="let item of items">
+    <li class="col-lg-4 col-md-6 table-info-li" *ngFor="let table of items">
+      <div [ngSwitch]="table.status">
+        <div *ngSwitchCase="'taken'">
+          <ng-container *ngTemplateOutlet="taken; context:{tableNumber: table.tableNumber}"></ng-container>
+        </div>
+        <div *ngSwitchCase="'free'">
+          <ng-container *ngTemplateOutlet="free; context:{tableNumber: table.tableNumber}"></ng-container>
+        </div>
+        <div *ngSwitchCase="'booked'">
+          <ng-container *ngTemplateOutlet="booked; context:{tableNumber: table.tableNumber}"></ng-container>
+        </div>
+      </div>
+      
       <div class="table-info__padding-container">
         <div class="d-flex table-info-div">
           <div class="table-info__icon table-info__icon-people"><i class="material-icons">group</i></div>
-          <div class="table-info__text">{{item.personNumber}} человека</div>
+          <div class="table-info__text">{{table.personNumber}}/{{table.maxPersonNumber}} человека</div>
         </div>
         <div class="d-flex table-info-div">
           <div class="table-info__icon table-info__icon-alarm"><i class="material-icons">access_alarm</i></div>
-          <div class="table-info__text">{{item.checkinTime}}</div>
+          <div class="table-info__text">{{table.checkinTime}}</div>
         </div>
         <div class="d-flex table-info-div">
           <div class="table-info__icon table-info__icon-timer"><i class="material-icons">watch_later</i></div>
-          <div class="table-info__text">{{item.deadline}}</div>
+          <div class="table-info__text">{{table.deadline}}</div>
         </div>
         <div class="d-flex table-info-div">
           <div class="table-info__icon table-info__icon-phone"><i class="material-icons">phone</i></div>
-          <div class="table-info__text">{{item.phoneNumber}}</div>
+          <div class="table-info__text">{{table.phoneNumber}}</div>
         </div>
         <div class="d-flex table-info-div">
           <div class="table-info__icon table-info__icon-person"><i class="material-icons">account_circle</i></div>
-          <div class="table-info__text">{{item.booker}}</div>
+          <div class="table-info__text">{{table.booker}}</div>
         </div>    
         <div class="d-flex table-info-div justify-content-between">
           <div class="d-flex">
@@ -29,17 +41,39 @@
           </div>
           <div>
             <div class="table-info__icon table-info__icon-comment">
-              <button (click)="showComment($event, item.id)">
-                <i *ngIf="!item.isCommentOpen" class="material-icons">arrow_drop_down</i>
-                <i *ngIf="item.isCommentOpen" class="material-icons">arrow_drop_up</i>
+              <button (click)="showComment($event, table.id)">
+                <i *ngIf="!table.isCommentOpen" class="material-icons">arrow_drop_down</i>
+                <i *ngIf="table.isCommentOpen" class="material-icons">arrow_drop_up</i>
               </button>
             </div>
           </div>
         </div>  
-        <div *ngIf="item.isCommentOpen" class="table-comment-dropdown__div">
-          <textarea class="table-comment-dropdown__textarea" id="comment-area">{{item.comment}}</textarea>
+        <div *ngIf="table.isCommentOpen" class="table-comment-dropdown__div">
+          <textarea class="table-comment-dropdown__textarea" id="comment-area">{{table.comment}}</textarea>
         </div> 
       </div>
     </li>
   </ul>
 </div>
+
+<ng-template #taken let-tableNumber="tableNumber">
+  <div class="table-status-div table-status-div__red">
+    <div class="table__number text-center">
+      {{tableNumber}}
+    </div>
+  </div>
+</ng-template>
+<ng-template #free let-tableNumber="tableNumber">
+  <div class="table-status-div table-status-div__green">
+    <div class="table__number text-center">
+      {{tableNumber}}
+    </div>
+  </div>
+</ng-template>
+<ng-template #booked let-tableNumber="tableNumber">
+  <div class="table-status-div table-status-div__orange">
+    <div class="table__number text-center">
+      {{tableNumber}}
+    </div>
+  </div>
+</ng-template>

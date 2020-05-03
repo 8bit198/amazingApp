@@ -93,6 +93,55 @@ $grey-color: rgb(128, 132, 145);
   border-radius: 10px;
 }
 
+.table-status-div {
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px #cccccc;
+  margin: 5px;
+  padding: 12px;
+  position: absolute;
+  width: 97.9%;
+  height: 97%;
+}
+
+.table-info-li:hover .table-status-div{
+  visibility: hidden;
+}
+
+.table-status-div__red {
+  background: #7a0000b2;
+}
+
+.table-status-div__green {
+  background: #007a29b2;
+}
+
+.table-status-div__orange {
+  background: #7a6e00b2;
+}
+
+.table-status-div__red .table__number {
+  color: $light-red-color;
+  border: 7px solid $light-red-color;
+}
+
+.table-status-div__green .table__number {
+  color: $light-green-color;
+  border: 7px solid $light-green-color;
+}
+
+.table-status-div__orange .table__number {
+  color: $light-orange-color;
+  border: 7px solid $light-orange-color;
+}
+
+.table__number {
+  font-size: 120px;
+  border-radius: 20px;
+  margin-top: 13%;
+  width: 57%;
+  height: 67%;
+  margin-left: 22%;
+}
 // bootstrap----------------------------------------
 
 .dropdown-toggle::before {
