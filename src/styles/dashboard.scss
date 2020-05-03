@@ -2,13 +2,18 @@ $darkblue-color:  #373B53;
 $grey-color: #969CBA;
 $purple-color: #713BDB;
 
-
-.dashboard-ul {
-  height: 100vh;
-background: $darkblue-color
+.dashboard-logo {
+  background: $purple-color;
+  color: #ffffff;
+  font-weight: 600;
 }
 
-.dashboard-ul li {
+.dashboard-ul {
+  height: 97.4vh;
+  background: $darkblue-color
+}
+
+.dashboard-li {
   font-weight: 500;
   padding: 15px 30px;
   color: $grey-color;
@@ -16,6 +21,7 @@ background: $darkblue-color
 
 .dashboard-li-active {
   background: linear-gradient(to right, $purple-color, 1%, $darkblue-color);
+  color: #ffffff;
 }
 
 .dashboard-li_icon-container {

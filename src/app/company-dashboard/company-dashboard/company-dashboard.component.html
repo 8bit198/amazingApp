@@ -1,29 +1,30 @@
 <div class="container-fluid p0">
   <div class="row no-gutters">
     <div class="col-3">
-      <ul class="dashboard-ul">
+      <div class="dashboard-logo text-center">LOGO</div>
+      <ul class="dashboard-ul m0">
         <li 
-        [ngClass]="'d-flex justify-content-between m0 '
+        [ngClass]="'d-flex justify-content-between m0 dashboard-li '
         + isTabActive('layout', currentTab, 'dashboard-li-active')" 
         (click)="onTabClicked('layout')">
           <div class="dashboard-li_text-container">Схема зала</div>
           <div class="dashboard-li_icon-container"><i class="material-icons">room_service</i></div>
         </li> 
         <li 
-        [ngClass]="'d-flex justify-content-between m0 '
+        [ngClass]="'d-flex justify-content-between m0 dashboard-li '
         + isTabActive('staff', currentTab, 'dashboard-li-active')" 
         (click)="onTabClicked('staff')">
           <div class="dashboard-li_text-container">Персонал</div>
           <div class="dashboard-li_icon-container"><i class="material-icons">assignment_ind</i></div>
         </li>
         <li 
-        [ngClass]="'d-flex justify-content-between m0 '
+        [ngClass]="'d-flex justify-content-between m0 dashboard-li '
         + isTabActive('notifications', currentTab, 'dashboard-li-active')" 
         (click)="onTabClicked('notifications')">
           <div class="dashboard-li_text-container">Уведомления</div>
           <div class="dashboard-li_icon-container"><i class="material-icons">notifications</i></div>
         </li>
-        <li class="d-flex justify-content-between">
+        <li class="d-flex justify-content-between dashboard-li">
           <div class="dashboard-li_text-container">Выход</div>
           <div class="dashboard-li_icon-container"><i class="material-icons">exit_to_app</i></div>          
         </li>

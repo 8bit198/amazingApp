@@ -1,5 +1,5 @@
 $base-color: #171822;
-$grey-color: #969CBA;
+$grey-color: rgb(128, 132, 145);
 $beige-color: #F1F3F6;
 $yellow-color: #FFAC30;
 $darkblue-color:  #3A4276;
@@ -49,9 +49,14 @@ li {
 }
 
 input:focus, 
-button:focus {
+button:focus, 
+textarea:focus {
   outline: 0 !important;
   box-shadow: none !important;
+}
+
+textarea {
+  resize: none
 }
 
 input {
@@ -60,6 +65,7 @@ input {
 
 button {
   border: 0;
+  background: none;
 }
 
 .text-grey {
@@ -69,6 +75,11 @@ button {
 .background-beige {
   background: $beige-color;
 }
+
+.background-none {
+  background: inherit !important;
+}
+
 
 .p-relative {
   position: relative;
