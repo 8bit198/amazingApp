@@ -22,6 +22,7 @@ const routes: Routes = [
     path: 'companydashboard',
     component: CompanyDashboardComponent,
     children: dashboardChildren },
+  { path: '**', component: LandingPageComponent },
 
 ];
 

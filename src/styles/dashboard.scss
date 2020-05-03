@@ -1,18 +1,21 @@
-$darkblue-color:  #3A4276;
-$darkblue-color01: rgb(152, 160, 219);
+$darkblue-color:  #373B53;
+$grey-color: #969CBA;
+$purple-color: #713BDB;
+
 
 .dashboard-ul {
   height: 100vh;
-  border-right: 3px solid $darkblue-color;
+background: $darkblue-color
 }
 
 .dashboard-ul li {
   font-weight: 500;
-  padding: 15px 0px;
+  padding: 15px 30px;
+  color: $grey-color;
 }
 
 .dashboard-li-active {
-  background: linear-gradient(to left, $darkblue-color01, white);
+  background: linear-gradient(to right, $purple-color, 1%, $darkblue-color);
 }
 
 .dashboard-li_icon-container {

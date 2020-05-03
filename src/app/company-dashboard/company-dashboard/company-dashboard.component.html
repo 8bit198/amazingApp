@@ -1,16 +1,25 @@
-<div class="container-fluid">
+<div class="container-fluid p0">
   <div class="row no-gutters">
     <div class="col-3">
       <ul class="dashboard-ul">
-        <li class="d-flex justify-content-between dashboard-li-active m0" (click)="onTabClicked('layout')">
+        <li 
+        [ngClass]="'d-flex justify-content-between m0 '
+        + isTabActive('layout', currentTab, 'dashboard-li-active')" 
+        (click)="onTabClicked('layout')">
           <div class="dashboard-li_text-container">Схема зала</div>
           <div class="dashboard-li_icon-container"><i class="material-icons">room_service</i></div>
         </li> 
-        <li class="d-flex justify-content-between" (click)="onTabClicked('staff')">
+        <li 
+        [ngClass]="'d-flex justify-content-between m0 '
+        + isTabActive('staff', currentTab, 'dashboard-li-active')" 
+        (click)="onTabClicked('staff')">
           <div class="dashboard-li_text-container">Персонал</div>
           <div class="dashboard-li_icon-container"><i class="material-icons">assignment_ind</i></div>
         </li>
-        <li class="d-flex justify-content-between" (click)="onTabClicked('notifications')">
+        <li 
+        [ngClass]="'d-flex justify-content-between m0 '
+        + isTabActive('notifications', currentTab, 'dashboard-li-active')" 
+        (click)="onTabClicked('notifications')">
           <div class="dashboard-li_text-container">Уведомления</div>
           <div class="dashboard-li_icon-container"><i class="material-icons">notifications</i></div>
         </li>

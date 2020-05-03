@@ -4,6 +4,7 @@ import { CompanyDashboardComponent } from './company-dashboard/company-dashboard
 import { HallLayoutComponent } from './hall-layout/hall-layout.component';
 import { CompanyNotoficationsComponent } from './company-notofications/company-notofications.component';
 import { StaffComponent } from './staff/staff.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -16,6 +17,7 @@ import { StaffComponent } from './staff/staff.component';
   ],
   imports: [
     CommonModule,
+    AppRoutingModule,
   ],
   exports: [
     CompanyDashboardComponent,
